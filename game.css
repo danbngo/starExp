@@ -1,0 +1,68 @@
+* {
+  user-select: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 14px;
+  width: 1000px;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.gameText {
+  text-transform: capitalize;
+  display: block;
+  margin: 1rem;
+  color: silver;
+  letter-spacing: 2px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+tr {
+  margin: 0;
+  padding: 0;
+}
+td {
+  padding: 0.25rem;
+  margin: 0;
+  border: 1px silver solid;
+}
+
+
+.gameButton {
+  display: inline-block;
+  background-color: gray;
+  color: black;
+  padding: 0.25rem;
+  margin-right: 1rem;
+}
+
+.gameButton:hover {
+  background-color: white;
+}
+
+.gamePageHeader {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: white;
+}
+
+.gameSectionHeader {
+  font-weight: bold;
+}
+
+hr {
+  height: 0px;
+  border: none;
+  border-top: 1px solid gray;
+}
