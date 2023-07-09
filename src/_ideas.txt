@@ -1,0 +1,50 @@
+initially a planet accretes mostly raw elements or very light compounds, ie, hydrogen, helium, nitrogen, water, carbon, silicon, iron.
+the planet is a molten ball of mixed elements at this stage.
+the planet can only accrete the lightest elements - hydrogen, helium, etc - if it has massive gravity.
+if a planet is near or outside the "frost line" of an element, it will accrete more of it, proportionally speaking.
+ie, the further out/colder the planet is, the more likely it is to accumulate elements with low or near-zero freezing points.
+eventually the planet cools and iron, silicon, carbon, and heavy elements sink towards the core. 
+as the planet cools down chemical compounds can form. based on the elements present on the planet, the atmosphere, hydrosphere, cryosphere may be filled with these compounds. for instance, if the planet had a lot of hydrogen and oxygen, water will form. 
+if the planet was very large, there will be so much hydrogen/helium that the other elements and compounds don't really matter, it will just be a big ball of gas mostly.
+if the planet was mid sized, volatiles/ices like water will be the dominant composition material, leading to it being an ice or steam giant.
+if the planet was small, it will be dominated by silicates, carbonates or iron.
+IS THIS AN ACCURATE DESCRIPTION OF PLANET FORMATION? are there important points i missed? most importantly, are there major inaccuracies?
+
+--
+
+if a planet with volatiles drifts close to the sun, or heats up some other way (runaway greenhouse, internal heating, etc) then the normally-liquid volatiles can turn into steam.
+this could lead to a hycean planet (hot ocean)
+note: gas/ice giants are already kind of like this, they have a hot soup of volatiles over a metallic hydrogen core.
+
+conversely, if a planet with gassy volatiles gets too cold, they can turn into liquid or ice.
+
+---
+
+why will chemistry be important?
+effects biology - helps determine where life arises, what type it is, what its "preferences" and character is, where it can settle/spread, etc
+effects economics - determines what resources are available on a planet, how fast a civilization or settlement can build/develop, trade routes/opportunities
+effects exploration - some chemicals create a more hostile and/or welcoming environment
+
+chemistry generation:
+figure out where the "bulk" of a planet's mass is. for giants, usually the atmosphere. for terrestrial planets, usually the core/mantle.
+figure out the state of matter for each element based on the planet's temperature
+assign some elements to each layer: core, mantle, lithosphere, hydrosphere, cryosphere, atmosphere, clouds
+add compounds to each layer depending on the layers above/below it as well as itself. ie, carbon in the ground + oxygen in the air = carbon dioxide in the air
+note: compounds are more stable than elements, so the majority of each layer would tend to be compounds
+note: co2 would not be in the ground due to its matter form (gas)
+get the proportion of each element/compound for each layer (common->rare)
+
+--
+
+basic development path:
+planet formation, chemistry
+biology, species, intelligent life
+society/civilization/culture/religion/technology tree
+space colonization, terraforming, stations, settlements
+interstellar trade, war, diplomacy
+fleet/ship generation
+drop player into the gameworld
+
+extras:
+officer/character generation
+mission/quest generation

@@ -1,0 +1,124 @@
+little tweaks needed:
+need to sanity test
+- make sure each layer contains at least 1 mandatory component (ie, usually at least a core + mantle, gas giants must have an atmosphere too)
+- make sure if liquid boils/freezes out of one layer it ends up in another
+
+
+done:
+
+supercritical fluid seems too common on terrestrial planets - maybe make pressure scale differently (ratio^2)
+moons need to be sorted
+planets dont seem to lose volatiles readily enough .. possibly due to the pressure effect described earlier?
+
+---
+problem: 
+deciding what matter state/part of the geosphere a chemical exists in is not simple.
+take the example of a gas giant - theres metallic hydrogen in the core, super critical hydrogen in the mantle, and gaseous hydrogen in the atmosphere
+THIS CAN EVEN INCLUDE METALS!!!
+
+for each layer of the geosphere
+  compute the temperature, pressure, and gravity at this layer
+  compute the matter state for each chemical based on the above
+  if its matter state isnt correct for this layer, remove it (sink or float up)
+  if it's a gas and this is the atmosphere AND the molecular weight doesnt "beat" the planets gravity, remove it
+
+clouds - not sure, but can use a heuristic - if liquid X exists on a planet's hydrosphere and gas X exists in its atmoshere, change it from atmosphere to clouds
+
+
+
+
+maybe need to add more geospheres:
+surface - day side
+surface - night side
+surface - winter hemisphere / polar regions (winter temp)
+surface - summer hemisphere
+
+need these temperatures:
+surface - summer day
+surface - summer night
+surface - winter day
+surface - winter night
+atmosphere - day side
+atmosphere - night side 
+
+habitable areas
+atmosphere - day side
+atmosphere - night side
+subsurface oceans (etc)
+
+
+poles (north and south?)
+and include temperature in geosphere instead of planet
+
+
+step 1 - start with a list of all chemicals
+step 2 - find out what state of matter each chemical would be in day, night, winter
+step 3 - if at any point the matter would be gaseous and the planet has no atmosphere, remove that chemical
+step 4 - instead of using a "force non gas" option, use escape velocity to remove any chemical that would turn into a REALLY energetic gas on a low gravity planet
+--the above steps should cut down the number of planets that undergo major phase transitions of matter to a reasonable level
+step 5 - if there are too many chems on a planets layer, remove some randomly by weight (also gas/metal/volatile AMOUNT can factor in)
+step 6 - define/track the matter transitions on the planet between day/night/winter and create traits to describe them
+step 7 - the planet menu should show 'geosphere' as representing day, with a button to toggle between day/night/winter (if any difference)
+
+step x - categorize the planet based on its chemical states and matter transitions (ie, steam vs ice giant)
+
+current problems:
+"replacing"/overlaying the chemical at a layer is tacky
+its not clear enough what happens to chemcs during state transition
+reinstate mantle, core
+have 1 matter state associated to each layer
+====
+
+ideas - have a few substances at the start
+for each time (day v night v winter) check what matter phase each substance would be
+use this to determine what all the phase transitions are
+list ALL the substances under the planets geosphere but add "traits" that describe how the substances move around, ie, when they dont exist
+
+changes required:
+all layers now have multiple chemicals (most % by mass = listed first)
+way to track which element has the most mass overall
+better cloud handling. clouds must go from liquid on land to liquid/solid in the troposphere. where/when this cant happen, dont have clouds, or make them fall as very light rain/hail.
+maybe merge geosphere testing into a single run through (instead of multiple iterations on same function)
+maybe merge geospheres so there is only one, and have phase transition traits describe the info that "day geosphere, night geosphere, winter geosphere" are currently conveying
+
+validation required:
+planet cant have zero atmosphere due to phase transitions
+terrestrial planet must retain 1 of lithosphere/hydrosphere at all times
+
+-----------
+geosphere phase transitions:
+
+1a. ocean freezing/sinking (hydrosphere->none, replaced by other hydrosphere)
+hydrosphere = super cooled liquid, freezes into ice and sinks during winter/night
+--causes secondary effect - clouds using that liquid can't from
+
+1b. ocean freezing/floating (hydrosphere->cryosphere)
+in this case it would replace the existing cryosphere or form a new one that didnt exist before. 
+requires: water and a few other substances have an ice form thats lighter than the liquid form
+
+1c. ocean boiling (hydrosphere->atmosphere)
+
+1d. molten surface cools into rock (molten hydrosphere->lithosphere)
+
+
+2a. atmosphere rains down (atmosphere->hydrosphere)
+hydrosphere = liquid, gets boiled during daytime/summer and joins the atmosphere
+--causes secondary effect, clouds can't form (probably SHOULD)
+
+2b. atmosphere falls down as hail (atmosphere->cryosphere)
+
+
+3. planets surface turns to magma (lithosphere->molten hydrosphere, definitely replaces whatever was there before)
+
+4a. planetary ice sublimates (cryosphere->atmosphere)
+4b. planetary ice melts (cryosphere->liquisphere)
+
+
+
+note: many of the above can happen simulaneously
+
+
+---
+sulfuric acid shows up as 
+-compressed solid in hydrosphere
+-liquid in atmosphere

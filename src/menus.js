@@ -4,8 +4,8 @@ class titleMenu {
   static start() {
     ui.newPage(`##SPACE EXPLORER
     v1.0
-    @Quick Start:titleMenu.quickStart()
-    @Start:titleMenu.introduction()`)
+    @Quick Start:::titleMenu.quickStart()
+    @Start:::titleMenu.introduction()`)
   }
   static quickStart() {
     
@@ -14,8 +14,8 @@ class titleMenu {
   static introduction() {
     ui.newPage(`##INTRODUCTION
       Bla bla
-      @Continue:titleMenu.startGame()
-      @Back:titleMenu.start()`)
+      @Continue:::titleMenu.startGame()
+      @Back:::titleMenu.start()`)
   }
   static startGame() {
     gs = {
@@ -42,6 +42,8 @@ class titleMenu {
 }
 
 
+
+
 class mainMenu {
   static addStats(NAMES = []) {
     let text = ''
@@ -56,11 +58,11 @@ class mainMenu {
   }
   static addButtons() {
     return `
-    @Map:mapMenu.start()
-    @Ship:shipMenu.start()
-    @Mission:missionMenu.start()
-    @Travel:travelMenu.start()
-    @Menu:gameMenu.start()`
+    @Map:::mapMenu.start()
+    @Ship:::shipMenu.start()
+    @Mission:::missionMenu.start()
+    @Travel:::travelMenu.start()
+    @Menu:::gameMenu.start()`
   }
   static start() {
     let stats = ''
